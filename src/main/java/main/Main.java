@@ -2,7 +2,7 @@ package main;
 
 import java.util.Scanner;
 
-import data.RandomNumbers;
+import data.Lotto;
 
 
 public class Main {
@@ -12,16 +12,16 @@ public class Main {
         System.out.println("Wybierz Gre");
         System.out.println("1 - Lotek");
 
-        RandomNumbers randomNumbers = new RandomNumbers();
+        Lotto lotto = new Lotto();
 
         Scanner scan = new Scanner(System.in);
         String choice = scan.nextLine();
         switch (choice) {
             case "1":
                 System.out.println("Podaj swoje liczby");
-                randomNumbers.setNumbers();
-                randomNumbers.numberList();
-                randomNumbers.hits();
+                lotto.setNumbers();
+                lotto.numberList();
+                lotto.hits();
                 break;
             default:
                 System.out.println("Zły wybor");

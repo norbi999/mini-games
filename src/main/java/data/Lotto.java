@@ -2,7 +2,7 @@ package data;
 
 import java.util.*;
 
-public class RandomNumbers {
+public class Lotto {
 
     TreeSet<Integer> generateNumbers = new TreeSet<Integer>();
     TreeSet<Integer> selectedNumbers = new TreeSet<Integer>();
