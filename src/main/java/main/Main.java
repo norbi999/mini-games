@@ -18,7 +18,6 @@ public class Main {
         String choice = scan.nextLine();
         switch (choice) {
             case "1":
-                System.out.println("Podaj swoje liczby");
                 lotto.setNumbers();
                 lotto.numberList();
                 lotto.hits();
