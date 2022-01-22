@@ -21,7 +21,7 @@ public class Lotto {
     public void setNumbers() {
 
         for (int i = 0; selectedNumbers.size() < 6; i++) {
-            System.out.println("Podaj " +(i+1)+" liczbe");
+            System.out.println("Podaj liczbe");
             Scanner scan = new Scanner(System.in);
             Integer choice = scan.nextInt();
             if (choice < 100 && choice > 0) {
