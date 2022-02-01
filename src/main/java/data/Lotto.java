@@ -1,57 +1,28 @@
 package data;
 
-import java.util.*;
+import java.util.Scanner;
+import java.util.Set;
 
 public class Lotto {
+    public void start() {
 
-    TreeSet<Integer> generateNumbers = new TreeSet<Integer>();
-    TreeSet<Integer> selectedNumbers = new TreeSet<Integer>();
-    int counter = 0;
+        System.out.println("Wybierz Gre");
+        System.out.println("1 - Lotek");
 
-    public Set numberList() {
-        for (int i = 0; generateNumbers.size() < 6; i++) {
-            Random r = new Random();
-            int a = (r.nextInt(98) + 1);
-            generateNumbers.add(a);
+
+        Scanner scan = new Scanner(System.in);
+        String choice = scan.nextLine();
+        switch (choice) {
+            case "1":
+                Set chooseYourNumbers = new ChooseYourNumbers().myNumbers();
+                Set generateNumbers = new GenerateNumbers().randomNumbersList();
+                HitsNumbers hitsNumbers = new HitsNumbers();
+                hitsNumbers.hits(chooseYourNumbers, generateNumbers);
+
+                break;
+            default:
+                System.out.println("Zły wybor");
+
         }
-        System.out.println("Wylosowane liczby: " + generateNumbers);
-        return generateNumbers;
-    }
-
-    public void setNumbers() {
-
-        for (int i = 0; selectedNumbers.size() < 6; i++) {
-            System.out.println("Podaj liczbe");
-            Scanner scan = new Scanner(System.in);
-            Integer choice = scan.nextInt();
-            if (choice < 100 && choice > 0) {
-                selectedNumbers.add(choice);
-            } else System.out.println("Musisz wybrac liczbe z przedzialu 1-99");
-        }
-    }
-
-    public void hits() {
-        for (Integer numb : generateNumbers) {
-            for (Integer num : selectedNumbers)
-                if (num == numb)
-                    counter++;
-        }
-
-        System.out.println("Liczba trafien to: " + counter);
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
