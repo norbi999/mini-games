@@ -1,5 +1,5 @@
 # First projects with mini-games:
-1st game Lotto
-user choose six numbers(1-99)
-next computer will draw six numbers
-have you six right?
+Lotto:
+User choose six numbers(1-99).
+Next computer will draw six numbers. 
+Have you six right?
