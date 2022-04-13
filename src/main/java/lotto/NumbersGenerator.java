@@ -1,17 +1,15 @@
-package data;
+package lotto;
 
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class GenerateNumbers {
+ class NumbersGenerator {
 
     private static final int MAX_GENERATED_NUMBER = 98;
 
-    public Set randomNumbersList() {
-        Set<Integer> randomNumbers = new TreeSet<Integer>();
-
-
+     public Set<Integer> randomNumbersList() {
+        Set<Integer> randomNumbers = new TreeSet<>();
         for (int i = 0; randomNumbers.size() < 6; i++) {
             Random r = new Random();
             int a = (r.nextInt(MAX_GENERATED_NUMBER) + 1);
