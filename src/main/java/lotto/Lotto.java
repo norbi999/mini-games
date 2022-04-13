@@ -2,21 +2,20 @@ package lotto;
 
 import lombok.AllArgsConstructor;
 
-import java.util.Scanner;
 import java.util.Set;
 
 @AllArgsConstructor
  public class Lotto {
 
     private final InputNumbers inputNumbers;
-    private final NumbersGenerator numbersGenerator;
+    private final OutputNumbers outputNumbers;
     private final HitsNumbers hitsNumbers;
  //   private final Scanner scan;
 
     public LottoResult start() {
 
         Set<Integer> chooseYourNumbers = inputNumbers.myNumbers();
-        Set<Integer> generateNumbers = numbersGenerator.randomNumbersList();
+        Set<Integer> generateNumbers =outputNumbers.lottoNumbers();
         return hitsNumbers.hits(chooseYourNumbers, generateNumbers);
 
         /*System.out.println("Wybierz Gre");

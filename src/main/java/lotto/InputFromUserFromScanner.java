@@ -15,7 +15,7 @@ public class InputFromUserFromScanner implements InputFromUser {
     public Set<Integer> receiveSixNumbers() {
         Set<Integer> selectedNumbers = new TreeSet<>();
 
-        while(selectedNumbers.size()==6) {
+        while(selectedNumbers.size()<6) {
             System.out.println("Podaj liczbe");
             Integer choice = scanner.nextInt();
             if (choice < 100 && choice > 0) {

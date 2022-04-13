@@ -2,14 +2,14 @@ package lotto;
 
 import lombok.AllArgsConstructor;
 
-import java.util.*;
+import java.util.Set;
 
 @AllArgsConstructor
- class InputNumbers {
+class InputNumbers {
 
     private final InputFromUser inputFromUser;
 
-     Set<Integer> myNumbers(){
+    Set<Integer> myNumbers() {
         return inputFromUser.receiveSixNumbers();
     }
 }

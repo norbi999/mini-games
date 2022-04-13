@@ -4,13 +4,12 @@ import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
 
- class NumbersGenerator {
+class OutputFormLottoFromGenerator implements OutputFromLotto{
+    private final int MAX_GENERATED_NUMBER = 98;
 
-    private static final int MAX_GENERATED_NUMBER = 98;
-
-     public Set<Integer> randomNumbersList() {
+    public Set<Integer> drawnSixNumbers() {
         Set<Integer> randomNumbers = new TreeSet<>();
-        for (int i = 0; randomNumbers.size() < 6; i++) {
+        while(randomNumbers.size() < 6) {
             Random r = new Random();
             int a = (r.nextInt(MAX_GENERATED_NUMBER) + 1);
             randomNumbers.add(a);
@@ -19,3 +18,4 @@ import java.util.TreeSet;
         return randomNumbers;
     }
 }
+
